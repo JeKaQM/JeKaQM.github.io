@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="login.js"></script>
+</head>
+<body>
+  <div class="body login">
+    <header>
+      <div class="top-menu-container">
+        <div class="top-item-container">
+          <a class="menu-button" href="index.html"> Home </a>
+        </div>
+        <div class="top-item-container">
+          <a class="menu-button" href="Foods.html"> Foods </a>
+        </div>
+        <div class="top-item-container">
+          <a class="menu-button" href="Drinks.html"> Drinks </a>
+        </div>
+        <div class="top-item-container">
+          <a class="menu-button" href="Contact-us.html"> Contact Us </a>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="form-container">
+        <div class="row-1">
+          <p class="title">Sign In</p>
+        </div>
+        <div class="row-1">
+          <div id="captcha" class="captcha text">
+            <script>createCapt();</script>
+          </div>
+          <div class="restart">
+            <a onclick="createCapt()" class="button submit">Generate New Captcha</a>
+          </div>
+          <form name="f1" action = "authentication.php" onsubmit = "validation()" method = "POST">
+            <p class="label"> UserName </p>
+            <div class="border">
+              <input type="text" class="input-field" id="user" name="user" placeholder="admin"/>
+            </div>
+            <p class="label"> Password </p>
+            <div class="border">
+              <input type="password" class="input-field" id="pass" name="pass" placeholder="1234"/>
+            </div>
+          <div class="row-1">
+            <div class="border">
+              <input type="text" class="input-field" name="reCaptcha" id="reCaptcha" placeholder="Captcha"/>
+            </div>
+          </div>
+          <div class="row-1">
+            <input type = "submit" onclick="validate()" class="button left" id = "btn" value = "Login"/>
+            <input type="reset" class="button right" onClick="refreshPage()" value="Cancel" />
+            <div>
+              <div id="errCaptcha" class="errmsg"></div>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

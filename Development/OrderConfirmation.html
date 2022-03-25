@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" type="text/css" href="OrderConfirmation.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="captcha.js"></script>
+</head>
+
+<body>
+  <div class="body orderconfirmation">
+    <header>
+      <div class="top-menu-container">
+        <div class="top-item-container">
+          <a class="menu-button" href="index.html"> Home </a>
+        </div>
+        <div class="top-item-container">
+        <a class="menu-button" href="Foods.html"> Foods </a>
+        </div>
+        <div class="top-item-container">
+        <a class="menu-button" href="Drinks.html"> Drinks </a>
+        </div>
+        <div class="top-item-container">
+        <a class="menu-button" href="Contact-us.html"> Contact Us </a>
+        </div>
+      </div>
+    </header>
+
+
+
+<div class="container">
+  <div class="row-1">
+    <h2 class="Thank">Thank you for ordering at Oaxaca!</h2>
+  </div>
+<br />
+<br />
+<br />
+<br />
+
+  <div class="column-2-1 container-large transparent-bg">
+    <h3 class="YourOrderSummary">Your Order Summary:</h3>
+    <div class="OrderNumber">Order number: 1555736707</div>
+
+    <div class= "ItemsOrdered">
+      <h4>Items Ordered:</h3>
+      <div class="Item">
+        <span class="Amount">2</span>
+        <span class="Item-description">PHILLY CHEESE STEAK</span>
+        <span class="Price">£11.90</span>
+      </div>
+      <div class="Item">
+        <span class="Amount">1</span>
+        <span class="Item-description">BUDWEISER</span>
+        <span class="Price">£1.99</span>
+      </div>
+   </div>
+
+      <div class="total-amount">
+      <h3 class="Total paid">Total Paid:</h3>
+      <span class="Amount paid">£13.89</span>
+      </div>
+
+      <div class="payment-method">
+      <h3 class="Payment Method">Payment Method:</h3>
+         <span class="method">Debit card</span>
+      </div>
+    </div>
+
+
+
+<div class="column-2-2 container-large2">
+      <h2 class="YourOrderStatus">Your Order Status:</h2>
+      <p>Your food is now being prepared by our kitchen staff and should be ready soon.</p>
+  
+  <script>
+      //Get it from database
+      var countDownDate = new Date("Mar 18, 2022 11:35:00").getTime();
+
+      var x = setInterval(function() {
+
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("time").innerHTML = + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("time").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+      </script>
+</div>
+
+<footer>
+  <div class="bot-menu-container">
+    <div class="bot-item-container">
+      <a class="menu-button" href="login.html"> Sign In </a>
+    </div>
+    <div class="bot-item-container">
+      <a class="menu-button" href="Policy-Page.html"> Privacy Policy </a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</div>
+</body>
+</html>

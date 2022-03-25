@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <script src="https://kit.fontawesome.com/328ca71b45.js" crossorigin="anonymous"></script>
+  <title>Input new menu item</title>
+  <link rel="stylesheet" type="text/css" href="admin.css" />
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div class="body">
+    <div class="body">
+      <header>
+        <div class="menu-container">
+          <ul class="top-menu">
+            <li class="menu-item">
+              <a href="index.html"> Home </a>
+            </li>
+            <li class="menu-item">
+              <a href="Admin-landing.html"> Admin-Landing </a>
+            </li>
+            <li class="menu-item">
+              <a href="Admin-Food.html"> Food </a>
+            </li>
+            <li class="menu-item">
+              <a href="Admin-Drinks.html"> Drinks </a>
+            </li>
+            <li class="menu-item">
+              <a href="Admin-messages.html"> Messages </a>
+            </li>
+            <li class="menu-item">
+              <a href="Admin-order.html"> Order Status </a>
+          </li>
+          </ul>
+        </div>
+      </header>
+      <div class="content">
+        <p>Please select the table to view the orders</p>
+        <form action="">
+          <select name="customers" onchange="showCustomer(this.value)">
+            <option value="">Select a Table:</option>
+            <option value="1">Table 1</option>
+            <option value="2">Table 2</option>
+            <option value="3">Table 3</option>
+            <option value="4">Table 4</option>
+            <option value="5">Table 5</option>
+          </select>
+        </form>
+        <br>
+        <div id="txtHint">The orders will be listed here once a table is selected</div>
+        <div id="Order"></div>
+        <script>
+          function showCustomer(str) {
+            if (str == "") {
+              document.getElementById("txtHint").innerHTML = "";
+              return;
+            }
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+              document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "get_table.php?q=" + str);
+            xhttp.send();
+            const dishes = new XMLHttpRequest();
+            dishes.onload = function () {
+              document.getElementById("Order").innerHTML = this.responseText;
+            }
+            dishes.open("GET", "get_dishes.php?q=" + str);
+            dishes.send();
+          }
+        </script>
+      </div>
+      <div id="dash">
+        Welcome back to the [Admin Manager Staff] page, [Username]
+        <div id="glance">At a glance</div>
+        <div id="activity">Activity</div>
+        <div id="notifications">Notifications [0 1 2 3+]</div>
+      </div>
+</body>
+
+</html>

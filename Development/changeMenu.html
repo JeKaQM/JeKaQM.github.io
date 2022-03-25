@@ -1,0 +1,73 @@
+<html>  
+    <head>
+        <script>
+            var operation = {
+                "Change Price": {
+                    "Premier Burgers":     ["Salinas", "Gonzales"],
+                    "Sandwiches":          ["Cheese", "Turkey", "Tuna", "BLT"],
+                    "Panini's & Toasties": ["Philly Cheese Steak", "Chicken & Red Pepper", "Tuna Melt", "Jalapeno Pepper", "The Italian"],
+                    "Grilled Meats":       ["8 oz Sirloin, Bacon Chops","Lamb Chops Meal","Lamb Chops Original", "Original Chicken Steak", "Mixed Grill", "Family Platter"],
+                    "Sides":               ["Chilli Cheese Fries", "Chips & Dip", "Chicken Quesadilla", "Loaded Nachos", "Fried Pickles", "Panzanella", "Wedges", "Mixed Salad"],
+                    "Dessert":             ["Mini Panettone Classico", "Dark Side Of The Moon", "Tiramisu", "Apple Crisp", "Twin Cannoli", "Peanut Butter Explosion", "Cheesecake", "Chocolate Ice Cream"],
+                    "Soft Drinks":         ["1.25 Coca Cola", "300ml Coca Cola", "1.25 RWhites Lemonade", "250ml Red Bull", "1L Schweppes Soda Water", "1.25L Diet Coca Cola", "300ml Diet Coca Cola", "1L Its Just Juice Orange Juice"],
+                    "Beer & Cider":        ["Corona", "Peroni", "Heineken", "Brakspear", "Budweiser", "Stella Artois", "Old Mout Kiwi & Lime", "Kopparberg Strawberry & Lime", "Strongbow Original Cider"]
+                },
+                "Change Description": {
+                    "Premier Burgers":     ["Salinas", "Gonzales"],
+                    "Sandwiches":          ["Cheese", "Turkey", "Tuna", "BLT"],
+                    "Panini's & Toasties": ["Philly Cheese Steak", "Chicken & Red Pepper", "Tuna Melt", "Jalapeno Pepper", "The Italian"],
+                    "Grilled Meats":       ["8 oz Sirloin, Bacon Chops","Lamb Chops Meal","Lamb Chops Original", "Original Chicken Steak", "Mixed Grill", "Family Platter"],
+                    "Sides":               ["Chilli Cheese Fries", "Chips & Dip", "Chicken Quesadilla", "Loaded Nachos", "Fried Pickles", "Panzanella", "Wedges", "Mixed Salad"],
+                    "Dessert":             ["Mini Panettone Classico", "Dark Side Of The Moon", "Tiramisu", "Apple Crisp", "Twin Cannoli", "Peanut Butter Explosion", "Cheesecake", "Chocolate Ice Cream"],
+                    "Soft Drinks":         ["1.25 Coca Cola", "300ml Coca Cola", "1.25 RWhites Lemonade", "250ml Red Bull", "1L Schweppes Soda Water", "1.25L Diet Coca Cola", "300ml Diet Coca Cola", "1L Its Just Juice Orange Juice"],
+                    "Beer & Cider":        ["Corona", "Peroni", "Heineken", "Brakspear", "Budweiser", "Stella Artois", "Old Mout Kiwi & Lime", "Kopparberg Strawberry & Lime", "Strongbow Original Cider"]
+                }
+            }
+            window.onload = function() {
+                var selectAction = document.getElementById("selectAction");
+                var selectCategory = document.getElementById("selectCategory");
+                var selectItem = document.getElementById("selectItem");
+                
+
+                for (var x in operation) {
+                    selectAction.options[selectAction.options.length] = new Option(x, x);
+                }
+                selectAction.onchange = function() {
+                    selectItem.length = 1;
+                    selectCategory.length = 1;
+                    for (var y in operation[this.value]) {
+                    selectCategory.options[selectCategory.options.length] = new Option(y, y);
+                    }
+                }
+                selectCategory.onchange = function() {
+                    selectItem.length = 1;
+                    var z = operation[selectAction.value][this.value];
+                    for (var i = 0; i < z.length; i++) {
+                        selectItem.options[selectItem.options.length] = new Option(z[i], z[i]);
+                    }
+                }
+            }
+        </script>
+    </head>  
+
+    <body>
+        <form name="form1" id="form1">
+            Action: <select name="action" id="selectAction">
+                <option value="" selected="selected">Select action</option>
+              </select>
+              <br><br>
+            Category: <select name="category" id="selectCategory">
+                <option value="" selected="selected">Please select an action first</option>
+              </select>
+              <br><br>
+            Item: <select name="item" id="selectItem">
+                <option value="" selected="selected">Please select a category first</option>
+              </select>
+              <br><br>
+              <label for="fname">Please input the new value:</label>
+              <input type="text" id="fname" name="fname"> 
+              <input type="submit" value="Submit">
+        </form>
+        
+    </body>  
+</html>  

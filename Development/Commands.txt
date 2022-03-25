@@ -1,0 +1,25 @@
+Commands used on the database to create tables:
+CREATE TABLE IF NOT EXISTS Menu(
+  item varchar(30) NOT NULL,
+  desc text NOT NULL,
+  type varchar(3) NOT NULL,
+  price float,
+  PRIMARY KEY (item)
+);
+
+Filled the table with test values, example:
+INSERT INTO Menu VALUES ('CLASSICO BURGER', 
+'Smashed Gourmet beef patty Melt in the middle cheese, topped with special burger sauce, pickles, lettuce, tomato & onion', 
+'PBG', 
+5.49);
+
+Made the TableOrders table for storing orders:
+CREATE TABLE IF NOT EXISTS TableOrders( 
+  ID INT NOT NULL, 
+  item VARCHAR(30), 
+  FOREIGN KEY(ID) REFERENCES Tables(Table_Number), 
+  FOREIGN KEY(item) REFERENCES Menu(item)
+);
+
+Filled the TableOrders table with some sample items:
+INSERT INTO TableOrders VALUES (3,'CLASSICO BURGER');

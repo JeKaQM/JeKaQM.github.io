@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--- Below is a link to a premade external CSS, this is just to make it look better, remove and use the original CSS file!     -->
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    /> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Captcha Test
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="captcha" class="captcha"><script>createCapt();</script></div>
+      <div class="restart">
+      <a href="#" onclick="createCapt()">Generate/Change</a>
+    </div>
+      <div class="input">
+        <input
+          type="text"
+          name="reCaptcha"
+          id="reCaptcha"
+          placeholder="Type The Captcha"
+        />
+      </div>
+      <div>
+        <input type="button" value="Submit" onclick="validate()" />
+      <div>
+      <div id="errCaptcha" class="errmsg"></div>
+    </div>
+    <script>
+      let captcha = new Array();
+
+      function createCapt() {
+        const activeCaptcha = document.getElementById("captcha");
+        for (q = 0; q < 6; q++) {
+          if (q % 2 == 0) {
+            captcha[q] = String.fromCharCode(Math.floor(Math.random() * 26 + 65));
+          } else {
+            captcha[q] = Math.floor(Math.random() * 10 + 0);
+          }
+        }
+        theCaptcha = captcha.join("");
+        activeCaptcha.innerHTML = `${theCaptcha}`;
+      }
+
+      function validate() {
+          const errCaptcha = document.getElementById("errCaptcha");
+          const reCaptcha = document.getElementById("reCaptcha");
+          recaptcha = reCaptcha.value;
+          let validateCaptcha = 0;
+          for (var z = 0; z < 6; z++) {
+            if (recaptcha.charAt(z) != captcha[z]) {
+              validateCaptcha++;
+            }
+          }
+          if (recaptcha == "") {
+            errCaptcha.innerHTML = "Re-Captcha must be filled";
+          } else if (validateCaptcha > 0 || recaptcha.length > 6) {
+            errCaptcha.innerHTML = "Wrong captcha";
+          } else {
+            errCaptcha.innerHTML = " Captcha Correct! ";
+          }
+        }
+    </script> <!--- Above is the JS code that I took from App.js it is now merged so that it is easier to see and implement into the login-->
+  </body>
+</html>

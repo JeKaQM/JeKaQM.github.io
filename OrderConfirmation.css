@@ -1,0 +1,139 @@
+body{
+  background: #1c1c1c;
+  font-family: "Serif";
+  animation: transitionIn 1.5s;
+}
+
+.body{
+  width:100%;
+  height: 100%;
+  color:white;
+  padding-top: 20px;
+}
+
+.orderconfirmation{
+  background-image:url("../Media/cyborg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom:-10px;
+}
+
+.top-menu-container{
+  width:100%;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  text-align:center;
+}
+
+div.top-item-container{
+  display: inline;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+  div.top-item-container{
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}
+
+.menu-button{
+  color: white;
+  padding: 14px 16px;
+  margin-bottom:30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu-button:hover {
+  color: #993d3d;
+  transition: 0.2s;
+}
+
+.container{
+  margin: auto;
+  width: 100%;
+  max-width: 1500px;
+  padding-bottom: 20px;
+}
+
+.container-large{
+  cmax-width:98%;
+  height: 58vh;
+  padding-top:20vh;
+  cpadding-right:5vh;
+}
+
+.container-large2{
+  background-image:url("../Media/web.jpg");
+  cmax-width:98%;
+  height: 58vh;
+  padding-top:20vh;
+}
+
+.transparent-bg{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+div.row-1{
+  width:100%;
+  padding-top: 20px;
+  text-align:center;
+}
+
+div.column-2-1{
+  width: 50%;
+  cpadding-left:10%;
+  float:left;
+  text-align:center;
+}
+
+div.column-2-2{
+  width: 50%;
+  cpadding-right:10%;
+  float:left;
+  text-align:center;
+}
+
+.bot-menu-container{
+  width:100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align:right;
+  bottom: 0px;
+}
+
+.bot-menu-container a {
+  width:100%;
+  color: #6c6c6c;
+  margin-bottom:30px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.bot-menu-container a:hover {
+  color: #993d3d;
+  transition: 0.2s;
+}
+
+div.bot-item-container{
+  display: inline;
+}
+
+.YourOrderSummary {
+  text-align: center;
+  font-size: 30px;
+  }
+
+.YourOrderStatus{
+  font-size: 30px;
+}
+
+.Thank{
+  font-size: 40px;
+}

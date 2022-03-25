@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>add Drinks</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,
+               initial-scale=1.0" />
+
+  <link rel="stylesheet" href="admin.css" class="css" />
+
+
+<body>
+  <div class="body">
+
+    <header>
+      <div class="menu-container">
+        <ul class="top-menu">
+          <li class="menu-item">
+            <a href="index.html"> Home </a>
+          </li>
+          <li class="menu-item">
+            <a href="Admin-landing.html"> Admin-Landing </a>
+          </li>
+          <li class="menu-item">
+            <a href="Admin-Food.html"> Food </a>
+          </li>
+          <li class="menu-item">
+            <a href="Admin-Drinks.html"> Drinks </a>
+          </li>
+          <li class="menu-item">
+            <a href="Admin-messages.php"> Messages </a>
+          </li>
+          <li class="menu-item">
+            <a href="admin-order.php"> Order Status </a>
+        </li>
+        </ul>
+      </div>
+    </header>
+
+    </head>
+
+
+
+    <div class="content">
+      <div class="form-container">
+        <div class="input-row">
+          <label class="label-back"> Enter details of the drinks you would like to add below </label>
+        </div>
+        <br><br><br>
+        <form name="addItem" action="addItemToMenu.php" method="GET">
+          <div>
+            <label for="item_name">Name of the item you'd like to add</label><br>
+            <input name="item_name" id="item_name">
+          </div>
+          <div>
+            <label for="item_desc">Description of the item you'd like to add</label><br>
+            <input name="item_desc" id="item_desc">
+          </div>
+          <div>
+            <label for="item_type">Type of the item you'd like to add</label><br>
+            <input name="item_type" id="item_type">
+          </div>
+          <div>
+            <label for="item_price">Price of the item you'd like to add</label><br>
+            <input name="item_price" id="item_price">
+          </div>
+          <div>
+            <Button>Add Item</Button>
+          </div>
+        </form>
+        <!--
+      <form name="form">
+        <div class="input-row">
+          <label class="label-back">Food name</label><br>
+          <input type="text" class="input-field" id="item_name" name="item_name" placeholder="e.g. Dessert">
+        </div>
+        <div class="input-row">
+          <label class="label-back">Description</label>
+          <br>
+          <textarea rows="4" cols="50" class="input-field" id="description" name="description"
+            placeholder="e.g. Freshly made desserts with milk from British cows..."></textarea>
+        </div>
+        <div class="input-row">
+          <label class="label-back"> Add Courses & dishes</label><br>
+        </div>
+        <div class="input-row">
+          <input type="text" class="input-field" id="item_section" name="item_name" placeholder="e.g. Eton Mess"> <i
+            class="fas fa-trash-alt"></i><br>
+          <input type="text" class="input-field" id="dish_name" name="item_name" placeholder="Allergens"><br>
+          <input type="text" class="input-field" id="item_price" name="item_name" placeholder="Price (in £)"> <i
+            class="fas fa-trash-alt"></i><br>
+          <input type="text" class="input-field" id="item_description" name="item_name" placeholder="Description"><br><br>
+          <input type="button" value="submit">
+        </div>
+      </form>-->
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+
+
+
+</html>

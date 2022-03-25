@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Payment Page</title>
+      <link rel="stylesheet" type="text/css" href="PaymentPage.css" />
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script type="text/javascript" src="captcha.js"></script>
+    </head>
+
+<body>
+  <div class="body paymentpage">
+    <header>
+      <div class="top-menu-container">
+        <div class="top-item-container">
+          <a class="menu-button" href="index.html"> Home </a>
+        </div>
+        <div class="top-item-container">
+          <a class="menu-button" href="menu.php"> Foods </a>
+        </div>
+        <div class="top-item-container">
+          <a class="menu-button" href="Contact-us.php"> Contact Us </a>
+        </div>
+      </div>
+    </header>
+
+
+
+ <div class="container">
+
+   <div class="container transparent-bg">
+      <div class="row-1">
+        <p class="text">How would you like to pay?</p>
+      </div>
+
+      <div class="row-1">
+        <p class="text">Your Order:</p>
+        <br />
+        <div class="basket-item">
+          <span class="imgpay"></span>
+          <span class="dish-title">DOUBLE BARREL BURGER</span>
+          <span class="count">2</span>
+          <span class="dish-price">£16.98</span>
+    	  </div>
+        <h1 class="price">Total = £16.98</h1>
+      </div>
+   </div>
+
+ <div class="container">
+   <div class="row-1">
+   <button class="button basket-button">
+      Pay with Paypal
+   </button>
+
+   <br />
+   <br />
+
+   <div class="card-details">
+     <p>Pay using Credit or Debit card</p>
+
+
+     <div class="card-number">
+       <label> Card Number </label>
+       <input
+         type="text"
+         class="card-number-field"
+         placeholder="###-###-###"/>
+     </div>
+
+     <div class="date-number">
+       <label> Expiry Date </label>
+       <input type="text" class="date-number-field"
+              placeholder="DD-MM-YY" />
+     </div>
+
+     <div class="cvv-number">
+       <label> CVV number </label>
+       <input type="text" class="cvv-number-field"
+              placeholder="xxx" />
+     </div>
+     <div class="nameholder-number">
+       <label> Card Holder name </label>
+       <input
+         type="text"
+         class="card-name-field"
+         placeholder="Enter your Name"/>
+     </div>
+
+<br />
+<br />
+<br />
+
+    <a class="button basket-button" href="OrderConfirmation.html">Submit and Pay</a>
+
+
+   </div>
+
+</div>
+ </div>
+
+
+    <footer>
+      <div class="bot-menu-container">
+        <div class="bot-item-container">
+          <a class="menu-button" href="login.html"> Sign In </a>
+        </div>
+        <div class="bot-item-container">
+          <a class="menu-button" href="Policy-Page.html"> Privacy Policy </a>
+        </div>
+      </div>
+    </footer>
+</div>
+</div>
+
+</body>
+</html>

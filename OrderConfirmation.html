@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" type="text/css" href="OrderConfirmation.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="captcha.js"></script>
+</head>
+
+<body>
+  <div class="body orderconfirmation">
+    <header>
+      <div class="top-menu-container">
+        <div class="top-item-container">
+          <a class="menu-button" href="index.html"> Home </a>
+        </div>
+        <div class="top-item-container">
+          <a class="menu-button" href="menu.php"> Foods </a>
+        </div>
+        <div class="top-item-container">
+          <a class="menu-button" href="Contact-us.php"> Contact Us </a>
+        </div>
+      </div>
+    </header>
+
+
+
+<div class="container">
+  <div class="row-1">
+    <h2 class="Thank">Thank you for ordering at Oaxaca!</h2>
+  </div>
+<br />
+<br />
+
+  <div class="column-2-1 container-large transparent-bg">
+    <h3 class="YourOrderSummary">Your Order Summary:</h3>
+    <div class="OrderNumber">Order number: 1555736707</div>
+
+    <div class= "ItemsOrdered">
+      <h4>Items Ordered:</h3>
+        <div class="basket-item">
+          <span class="imgpay"></span>
+          <span class="dish-title">DOUBLE BARREL BURGER</span>
+          <span class="count">2</span>
+          <span class="dish-price">£16.98</span>
+    	  </div>
+   </div>
+
+      <div class="total-amount">
+      <h3 class="Total paid">Total Paid:</h3>
+      <span class="Amount paid">£13.89</span>
+      </div>
+
+      <div class="payment-method">
+      <h3 class="Payment Method">Payment Method:</h3>
+         <span class="method">Debit card</span>
+      </div>
+    </div>
+
+
+
+<div class="column-2-2 container-large2">
+      <h2 class="YourOrderStatus">Your Order Status:</h2>
+      <p>Your food is now being prepared by our kitchen staff and should be ready soon.</p>
+  
+      <p> Estimated time before order is ready:</p>
+  
+      <!-- Display the countdown timer in an element -->
+      <p id="time"></p>
+
+  <script>
+      //Get it from database
+
+     //var countDownDate = new Date("Mar 23, 2022 23:00:00").getTime();
+
+     // Set the date we're counting down to
+     var countDownDate = new Date().getTime() + 15 * 60 * 1000;
+
+     // Update the count down every 1 second
+     var x = setInterval(function() {
+
+       // Get today's date and time
+       var now = new Date().getTime();
+
+       // Find the distance between now and the count down date
+       var distance = countDownDate - now;
+
+       // Time calculations for hours, minutes and seconds
+       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+       // Display the result in the element with id="time"
+       document.getElementById("time").innerHTML = + hours + "h "
+       + minutes + "m " + seconds + "s ";
+
+       // If the count down is finished, write some text
+       if (distance < 0) {
+         clearInterval(x);
+         document.getElementById("time").innerHTML = "Order should be ready!";
+       }
+     }, 1000);
+     </script>
+</div>
+
+<footer>
+  <div class="bot-menu-container">
+    <div class="bot-item-container">
+      <a class="menu-button" href="login.html"> Sign In </a>
+    </div>
+    <div class="bot-item-container">
+      <a class="menu-button" href="Policy-Page.html"> Privacy Policy </a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Drinks</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="captcha.js"></script>
+</head>
+<body>
+  <div class="body index">
+    <header>
+      <div class="top-menu-container">
+        <div class="top-item-container">
+          <a class="menu-button" href="index.html"> Home </a>
+        </div>
+        <div class="top-item-container">
+          <a class="menu-button" href="Foods.html"> Foods </a>
+        </div>
+        <div class="top-item-container">
+          <a class="menu-button" href="Drinks.html"> Drinks </a>
+        </div>
+        <div class="top-item-container">
+          <a class="menu-button" href="Contact-us.html"> Contact Us </a>
+        </div>
+        <div class="top-item-container">
+          <a class="special-menu-button" href="Checkout.html"> Checkout</a>
+        </div>
+      </div>
+    </header>
+    <div class="container container-large">
+      <div class="row-1 re-space">
+        <h1 class="course-title">SOFT DRINKS</h1>
+      </div>
+      <div class="row-3">
+        <div class="column-3">
+          <div class="dish-item">
+            <span class="dish-title">COCA COLA 1.25L</span>
+            <span class="dish-description">The most iconic drink in the world in one of the most iconic bottles. Did you
+              know that every bottle of Coca Cola, when opened forms over 12,500 bubbles? Best served chilled of course.</span>
+            <span class="dish-price">£3.99</span>
+            <span class="counter">
+              <span onclick="inc('0')" class="sign">+</span>
+              <span id='count0' class="count">0</span>
+              <span onclick="dec('0')" class="sign">–</span>
+            </span>
+          </div>
+        </div>
+        <div class="column-3">
+          <div class="dish-item">
+            <span class="dish-title">COCA COLA 300ml</span>
+              <span class="dish-description">The most iconic drink in the world in one of the most iconic bottles. Did you
+                know that every bottle of Coca Cola, when opened forms over 12,500 bubbles? Best served chilled of
+                course.</span>
+              <span class="dish-price">£1.29</span>
+              <span class="counter">
+                <span onclick="inc('0')" class="sign">+</span>
+                <span id='count0' class="count">0</span>
+                <span onclick="dec('0')" class="sign">–</span>
+              </span>
+            </div>
+          </div>
+          <div class="column-3">
+            <div class="dish-item">
+              <span class="dish-title">RED BULL 250ML</span>
+              <span class="dish-description">Full of energy boosting taurine and caffeine blended with vitamins and sugar; Red
+              Bull - the energy drink that "gives you wings". Try it today.</span>
+              <span class="dish-price">£2.99</span>
+              <span class="counter">
+                <span onclick="inc('0')" class="sign">+</span>
+                <span id='count0' class="count">0</span>
+                <span onclick="dec('0')" class="sign">–</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript">(function () { window['__CF$cv$params'] = { r: '6d81f4861ccf76c5', m: 'KsC7Us9.YANe7BW2UZxr1pPScIrnTVz1Xa67BtgF37A-1643957326-0-AU7hp/hrG4EOlYDl9FNI9doWluZGwECpaq5ZQ8LtZiFqxmSPwgpHGftuFRKOlid+vKzoh8j0bMQRPD8eJKpR0L9B822KVZhnhKosqrtPhA+4qjinJEbvVi3XrMKG5PhiM116x5v4Y414ThuGu00mc/0l0DrbXj4d30m4c8G0/jIi0yRY4r90jUuIXFhppK6byZie2n5utW6lmirrc+uZQ6E=', s: [0x49394a19ac, 0xc7decea728], } })();</script>
+    <script>
+      function inc(id) {
+        let k = event.target.nextElementSibling.innerHTML;
+        k = parseInt(k);
+        let n = k + 1;
+        event.target.nextElementSibling.innerHTML = n;
+      }
+
+      function dec(id) {
+        let k = event.target.previousElementSibling.innerHTML;
+        k = parseInt(k);
+        let n = k - 1;
+        if (n >= 0)event.target.previousElementSibling.innerHTML = n;
+      }
+    </script>
+</body>
+
+</html>
